@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
-
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import ProductDetail from "./components/productDetail/ProductDetail";
+import Footer from "./components/footer/Footer";
+import { createContext, lazy, useState} from "react";
+import { Suspense } from "react";
+// import ProductListPage from "./pages/ProductListPage";
+const LazyProductListPage = lazy(()=>import('./pages/ProductListPage'))
+export const CartContext = createContext();
 function App() {
+     const [cartItem, setCartItem] = useState(0)
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <CartContext.Provider value={{cartItem:cartItem,setCartItem:setCartItem}}>
+      <Navbar />
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/productdetail/:id" element={<ProductDetail />} />
+          <Route path="/products" element={<Suspense fallback="...Loading"><LazyProductListPage /></Suspense>} />
+        </Routes>
+      </CartContext.Provider>
+      </BrowserRouter>
+      <Footer />
     </div>
   );
 }
