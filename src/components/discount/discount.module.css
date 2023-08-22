@@ -1,0 +1,127 @@
+.container{
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px 
+}
+.content{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+}
+.left{
+    width: 50%;
+    background-color: #CCCEA7;
+    padding: 42px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.right{
+    width: 50%;
+    background-color: #D6BEBE;
+    padding:42px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.discount{
+    width: 120px;
+}
+.btn {
+    padding: 8px 24px;
+    background-color: transparent;
+    cursor: pointer;
+    color: white;
+    border:1px solid white;
+}
+.btn:hover {
+    background-color: teal;
+    color: black;
+    transition: all 0.5s ease;
+}
+.head1{
+    font-size: 56px;
+    margin: 0px;
+}
+.head2{
+    font-size: 32px;
+    margin-top: 28px;
+}
+.section{
+    display: flex;
+    margin-top: 60px;
+    /* column-gap: 56px; */
+    padding: 28px 0px;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #F5F4F2;
+}
+.box{
+    padding-right: 48px;
+    border-right: 1px solid #FFC7D1;
+}
+.logo{
+    width: 80px;
+    
+}
+.ellipse{
+    width:100px;
+}
+.ellipse1{
+    margin-bottom: -100px;
+}
+.ellipse2{
+    margin-top: -100px;
+}
+@media all and (min-width:320px) and (max-width:600px) {
+    .logo{
+        width: 40px;
+
+    }
+    .content{
+        flex-direction: column;
+        width: 90%;
+        row-gap: 20px;
+    }
+    .box{
+        padding-right: 16px;
+    }
+    .ellipse{
+        width: 60px;
+    }
+    .left{
+        padding: 20px;
+        width: 90%;
+    }
+    .right{
+        width: 90%;
+        padding: 20px;
+    }
+}
+@media all and (min-width:601px) and (max-width:900px) {
+    .left{
+        padding: 20px;
+        width: 90%;
+    }
+    .right{
+        width: 90%;
+        padding: 20px;
+    }
+    .content{
+        width: 90%;
+        row-gap: 20px;
+    }
+    .head1{
+        font-size: 40px;
+    }
+    .head2{
+        font-size: 28px;
+    }
+}

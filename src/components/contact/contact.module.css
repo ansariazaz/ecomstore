@@ -1,0 +1,62 @@
+.container{
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    background: url('../../asset/bg.png');
+    background-color: #770015;
+}
+.content{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 48px;
+}
+.para{
+    font-size: 32px;
+    color: white;
+    text-align: center;
+    margin-top: 8px;
+}
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.email{
+    width: 400px;
+    padding: 16px 24px;
+    outline: none;
+    background-color: #a44052;
+    border: none;
+}
+.email::placeholder{
+    color: white;
+}
+.subsribe{
+    padding: 14px 24px; 
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+.subsribe:hover{
+    background-color: teal;
+    color: black;
+    transition: all 0.5s ease;
+    color: white;
+}
+@media all and (min-width:320px) and (max-width:600px) {
+    .content{
+        width: 90%;
+        padding: 40px 12px;
+    }
+    .para{
+        font-size: 20px;
+    }
+    .email{
+        padding: 10px 16px;
+    }
+    .subsribe{
+        padding: 8px 16px;
+    }
+}
