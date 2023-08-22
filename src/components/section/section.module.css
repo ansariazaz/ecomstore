@@ -9,11 +9,13 @@
 .topSection{
     display: flex;
     column-gap: 16px;
+    justify-content:center ;
     box-sizing: border-box;
 }
 .bottomSection{
     display: flex;
     margin-top: 16px;
+    justify-content: center;
     column-gap: 16px;
     box-sizing: border-box;
 }
